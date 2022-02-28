@@ -10,7 +10,7 @@ app.get("/calc", function(req,res){ //perform a get function using express throu
 });
 
 app.get("/", function(req,res){ //perform a get function using express through "app"
-    res.send("<script>console.log('worked')</script>")     //send index.html as a response
+    res.send("<script>console.log('test worked')</script>")     //send test response
 });
 
 app.get("/post", function(req,res){
