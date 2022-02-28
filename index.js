@@ -6,7 +6,7 @@ const myModule = require("./arithmeticFunctions.js");
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req,res){ //perform a get function using express through "app"
-    res.sendFile(__dirname + "/index.html")     //send hello world as a response
+    res.sendFile(__dirname + "/index.html")     //send index.html as a response
 });
 
 app.post("/", function(req, res){
@@ -56,30 +56,6 @@ app.listen(3000, function(){
     console.log("at port 3000 Server is ON")
     
 }); // Open server on port 3000 using express/app
-
-
-
-
-//     var operation = req.body.operation;
-
-    
-//     if(operation === "add"){
-//     var result = num1 + num2
-// }
-    
-//     // if(operation="subtract"){
-//     //     var result = num1 - num2
-//     //     return result
-//     // }
-
-//     // if(operation="multiply"){
-//     //     var result = num1 * num2;}
-
-//     // if(operation="divide"){
-//     //     var result = num1 / num2;}
-    
-//     // res.send("The result is " + result)
-// });
 
 
 
