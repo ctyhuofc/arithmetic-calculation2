@@ -14,7 +14,7 @@ app.get("/", function(req,res){ //perform a get function using express through "
 });
 
 app.get("/post", function(req,res){
-    res.sendFile(__dirname + "/hello.html")
+    res.sendFile(__dirname + "/post.html")
 });
 
 app.post("/post", function(req,res){
