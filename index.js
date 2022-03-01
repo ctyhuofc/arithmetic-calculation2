@@ -5,7 +5,7 @@ const myModule = require("./arithmeticFunctions.js"); //import functions from ar
 app.use(express.urlencoded({extended: false}));
 
 app.get("/calc", function(req,res){ //perform a get function using express through "app"
-    res.sendFile(__dirname + '/index.html')     //send index.html as a response
+    res.sendFile(__dirname + '/index.html')     //send index.html as a response/body
 });
 
 app.get("/", function(req,res){ //perform a get function using express through "app"
@@ -13,7 +13,7 @@ app.get("/", function(req,res){ //perform a get function using express through "
 });
 
 app.get("/post", function(req,res){
-    res.sendFile(__dirname + '/post.html')
+    res.sendFile(__dirname + '/post.html') //send post.html as response/body
 });
 
 app.post("/post", function(req,res){
@@ -43,8 +43,8 @@ app.post("/", function(req, res){ //post responses
 
 
     
-    const value1 = Number(req.body.num1); //html variables
-    const value2 = Number(req.body.num2);
+    const value1 = parseInt(req.body.num1); //html variables
+    const value2 = parseInt(req.body.num2);
     const oper = req.body.operation;
 
 
