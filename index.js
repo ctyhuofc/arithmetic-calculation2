@@ -52,15 +52,19 @@ app.post("/", function(req, res){ //post responses
     if(oper==='add'){                      //html conditionals
         answer = myModule.add(value1, value2)
         res.send('Operation: Addition<br>Value 1: ' +value1+ '<br>Value 2: ' +value2+ '<br>Result: ' +answer)
+        console.log('Operation: Addition Value 1: ' +value1+ ' Value 2: ' +value2+ ' Result: ' +answer)
     }else if(oper==='sub'){
         answer = myModule.sub(value1, value2)
         res.send('Operation: Subtraction<br>Value 1: ' +value1+ '<br>Value 2: ' +value2+ '<br>Result: ' +answer)
+        console.log('Operation: Subtraction Value 1: ' +value1+ ' Value 2: ' +value2+ ' Result: ' +answer)
     }else if(oper==='mul'){
         answer = myModule.multiply(value1, value2)
         res.send('Operation: Multiplication<br>Value 1: ' +value1+ '<br>Value 2: ' +value2+ '<br>Result: ' +answer)
+        console.log('Operation: Multiplication Value 1: ' +value1+ ' Value 2: ' +value2+ ' Result: ' +answer)
     }else if(oper==='div'){
         answer = myModule.divide(value1, value2)
         res.send('Operation: Division<br>Value 1: ' +value1+ '<br>Value 2: ' +value2+ '<br>Result: ' +answer)
+        console.log('Operation: Division Value 1: ' +value1+ ' Value 2: ' +value2+ ' Result: ' +answer)
     }
 
 });
