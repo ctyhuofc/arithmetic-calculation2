@@ -1,7 +1,7 @@
 const express = require("express"); // import express
 const bodyParser = require("body-parser"); //  import body-parser
 const app = express(); // call all exress methods under "app"
-const myModule = require("./arithmeticFunctions.js"); 
+const myModule = require("./arithmeticFunctions.js"); //import functions from arithmeticFunctions.js
 
 app.use(bodyParser.urlencoded({extended: true}));
 
