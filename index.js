@@ -1,12 +1,11 @@
 const express = require("express"); // import express
-const bodyParser = require("body-parser"); //  import body-parser
 const app = express(); // call all exress methods under "app"
 const myModule = require("./arithmeticFunctions.js"); //import functions from arithmeticFunctions.js
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 
 app.get("/calc", function(req,res){ //perform a get function using express through "app"
-    res.sendFile(__dirname + "/index.html")     //send index.html as a response
+    res.sendFile(__dirname + '/index.html')     //send index.html as a response
 });
 
 app.get("/", function(req,res){ //perform a get function using express through "app"
@@ -14,7 +13,7 @@ app.get("/", function(req,res){ //perform a get function using express through "
 });
 
 app.get("/post", function(req,res){
-    res.sendFile(__dirname + "/post.html")
+    res.sendFile(__dirname + '/post.html')
 });
 
 app.post("/post", function(req,res){
@@ -37,7 +36,7 @@ app.post("/post", function(req,res){
             console.log('Operation: Division Value 1: ' +value1+ ' Value 2: ' +value2+ ' Result: ' +answer)
         }
         }
-        calculate('div', 5,3) //console arguments + answer
+        calculate('div', 5,3) //<-- enter operation and numbers here
 });
 
 app.post("/", function(req, res){ //post responses
